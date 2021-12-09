@@ -1,0 +1,36 @@
+// VARIABLES
+@import "var";
+
+// ESTILOS: NAVBAR Y FOOTER
+@import "navbar";
+@import "footer";
+
+// ESTILOS: SECCIONES
+@import "contacto";
+@import "index";
+@import "nosotros";
+@import "proyectos";
+@import "servicios";
+
+// RESETS: GENERALES
+*{
+    margin: 0%; 
+    padding: 0%;
+}
+
+body{
+    // background: linear-gradient(0deg, rgba(161,165,166,1) 0%, rgba(53,61,64,1) 100%);
+    
+    ul{
+        li{
+            list-style: none;
+    
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+
