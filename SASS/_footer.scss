@@ -2,29 +2,26 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-    height: 154px;
+
     background-color: rgb(161,165,166); // PARA PROBAR QUE ESTE TODO OK
     position: fixed;
     bottom: 0;
     .footer-logo{
         img{
-            top: 2216px;
-            left: 64px;
             width: 272px;
             height: 154px;
             opacity: 1;
         }
     }
     .footer-info{
-        top: 2284px;
-        left: 720px;
-        width: 480px;
-        height: 25px;
+
         font-family: $font;
-        font-size: 20px;
+        font-size: 15px;
+        display: flex;
+        flex-wrap: wrap;
         color: black;
         color: $fontcolor; // DEJO COMENTADO EL COLOR PARA QUE SE VEA
-        text-align: left;
+        text-align: center;
         letter-spacing: 0px;
         opacity: 1;
         align-self: center;
@@ -45,8 +42,28 @@
             letter-spacing: 0px;
             opacity: 1;
             align-self: center;
-            font-size: 15px;
+            font-size: 10px;
             margin-right: 20px;
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .footer-logo{
+            display: flex;
+            justify-content: center;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        .footer-info{
+            margin-bottom: 20px;
+        }
+        .footer-social{
+            margin-bottom: 10px;
         }
     }
 }

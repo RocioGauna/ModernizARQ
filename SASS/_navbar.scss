@@ -1,0 +1,61 @@
+
+.navbar-container{
+    display: flex;
+    background-color: rgb(161,165,166); // PARA PROBAR QUE ESTE TODO OK
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    top: 0;
+
+    border-bottom: 2px solid white; //NO SE VE POR EL FONDO
+    .navbar-logo{
+        margin-left: 50px;
+    }
+    .navbar-toggle{
+        visibility: hidden;
+    }
+
+    .navbar-menu-container{
+        display: flex;
+        align-self: center;
+
+        .navbar-menu{
+            display: flex;
+            li{
+                margin-right: 35px;
+            }
+            a{
+                font-family: $font;
+                color: $fontcolor;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container{
+        display: flex;
+        flex-direction: column;
+        .navbar-logo{
+            display: flex;
+            justify-content: center;
+            .navbar-toggle{
+                visibility: visible;
+                display: flex;
+                height: 50px;
+                align-self: center;
+                background-color: transparent;
+                border: none;
+                position: absolute;
+                right: 25px;
+            }
+        }
+        .navbar-menu-container{
+            display: none;
+            .navbar-menu{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
