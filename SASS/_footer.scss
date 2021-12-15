@@ -2,10 +2,10 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-
-    background-color: rgb(161,165,166); // PARA PROBAR QUE ESTE TODO OK
+    //background-color: rgb(161,165,166); // PARA PROBAR QUE ESTE TODO OK
     position: fixed;
     bottom: 0;
+    border-top: 1px solid white;
     .footer-logo{
         img{
             width: 272px;

@@ -18,19 +18,33 @@
     padding: 0%;
 }
 
-body{
-        //background: linear-gradient(0deg, rgba(161,165,166,1) 0%, rgba(53,61,64,1) 100%);
+html, body{
+    height:100%;
+   }
+  
+  body {
+     background: -webkit-linear-gradient(rgba(53,61,64,1),rgba(161,165,166,1));
+     background: -o-linear-gradient(rgba(53,61,64,1),rgba(161,165,166,1));
+     background: -moz-linear-gradient(rgba(53,61,64,1),rgba(161,165,166,1));
+     background: linear-gradient(rgba(53,61,64,1),rgba(161,165,166,1));
+     margin:0px !important;
 
-    ul{
-        li{
-            list-style: none;
-    
-            a{
-                text-decoration: none;
-            }
-        }
-    }
-}
+     ul{
+         li{
+             list-style: none;
+     
+             a{
+                 text-decoration: none;
+             }
+         }
+     }
+
+   }
+
+/* body{
+       // background: linear-gradient(0deg, rgba(161,165,166,1) 0%, rgba(53,61,64,1) 100%);
+
+} */
 
 
 

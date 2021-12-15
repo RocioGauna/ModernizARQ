@@ -2,21 +2,24 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #a1a5a6;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 100%;
   position: fixed;
   top: 0;
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid white;
 }
 
 .navbar-container .navbar-logo {
   margin-left: 50px;
 }
 
+.navbar-container .navbar-logo a {
+  text-decoration: none;
+}
+
 .navbar-container .navbar-toggle {
-  visibility: hidden;
+  display: none;
 }
 
 .navbar-container .navbar-menu-container {
@@ -61,10 +64,9 @@
             justify-content: center;
   }
   .navbar-container .navbar-logo .navbar-toggle {
-    visibility: visible;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     height: 50px;
     -ms-flex-item-align: center;
         align-self: center;
@@ -74,12 +76,10 @@
     right: 25px;
   }
   .navbar-container .navbar-menu-container {
-    display: none;
+    position: fixed;
+    top: -100vh;
   }
   .navbar-container .navbar-menu-container .navbar-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -94,9 +94,9 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 100%;
-  background-color: #a1a5a6;
   position: fixed;
   bottom: 0;
+  border-top: 1px solid white;
 }
 
 .footer-container .footer-logo img {
@@ -189,6 +189,16 @@
   padding: 0%;
 }
 
+html, body {
+  height: 100%;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#353d40), to(#a1a5a6));
+  background: linear-gradient(#353d40, #a1a5a6);
+  margin: 0px !important;
+}
+
 body ul li {
   list-style: none;
 }
@@ -196,3 +206,8 @@ body ul li {
 body ul li a {
   text-decoration: none;
 }
+
+/* body{
+       // background: linear-gradient(0deg, rgba(161,165,166,1) 0%, rgba(53,61,64,1) 100%);
+
+} */
