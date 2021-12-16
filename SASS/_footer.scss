@@ -2,14 +2,12 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-    //background-color: rgb(161,165,166); // PARA PROBAR QUE ESTE TODO OK
-    position: fixed;
+    position: relative;
     bottom: 0;
     border-top: 1px solid white;
     .footer-logo{
         img{
-            width: 272px;
-            height: 154px;
+            height: 90px;
             opacity: 1;
         }
     }
@@ -20,7 +18,7 @@
         display: flex;
         flex-wrap: wrap;
         color: black;
-        color: $fontcolor; // DEJO COMENTADO EL COLOR PARA QUE SE VEA
+        color: $fontcolor;
         text-align: center;
         letter-spacing: 0px;
         opacity: 1;
@@ -37,7 +35,7 @@
         p{
             font-family: $font;
             color: black;
-            color: $fontcolor; // DEJO COMENTADO EL COLOR PARA QUE SE VEA
+            color: $fontcolor;
             text-align: left;
             letter-spacing: 0px;
             opacity: 1;
