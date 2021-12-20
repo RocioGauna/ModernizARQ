@@ -20,7 +20,17 @@
   text-decoration: none;
 }
 
-.navbar-container .navbar-toggle {
+.navbar-container .checkbtn {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+.navbar-container #check {
   display: none;
 }
 
@@ -31,6 +41,8 @@
   -ms-flex-item-align: center;
       align-self: center;
   margin-top: 30px;
+  position: relative;
+  z-index: 10;
 }
 
 .navbar-container .navbar-menu-container .navbar-menu {
@@ -81,27 +93,44 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .navbar-container .navbar-logo .navbar-toggle {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    height: 50px;
-    -ms-flex-item-align: center;
-        align-self: center;
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    right: 25px;
+  .navbar-container .checkbtn {
+    display: block;
   }
   .navbar-container .navbar-menu-container {
     position: fixed;
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 50px;
+    top: 65px;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    background-color: #003F63;
+    -webkit-transition: all .5s;
+    transition: all .5s;
   }
   .navbar-container .navbar-menu-container .navbar-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .navbar-container .navbar-menu-container .navbar-menu li {
+    margin-bottom: 20px;
+  }
+  .navbar-container .navbar-menu-container .navbar-menu .navbar-links {
+    font-size: 20px;
+  }
+  .navbar-container #check:checked + .navbar-menu-container {
+    left: 0;
+    z-index: 10;
   }
 }
 
@@ -199,6 +228,10 @@
   .footer-container .footer-social {
     margin-bottom: 10px;
   }
+}
+
+.prueba {
+  height: 800px;
 }
 
 .prueba {

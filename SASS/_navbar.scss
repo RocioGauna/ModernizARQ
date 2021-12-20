@@ -13,7 +13,16 @@
         }
         margin-left: 50px;
     }
-    .navbar-toggle{
+    .checkbtn{
+        font-size: 30px;
+        color: white;
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        display: none;
+        cursor: pointer;
+    }
+    #check{
         display: none;
     }
 
@@ -21,6 +30,8 @@
         display: flex;
         align-self: center;
         margin-top: 30px;
+        position: relative;
+        z-index: 10;
 
         .navbar-menu{
             display: flex;
@@ -57,22 +68,42 @@
         .navbar-logo{
             display: flex;
             justify-content: center;
-            .navbar-toggle{
-                display: inline-flex;
-                height: 50px;
-                align-self: center;
-                background-color: transparent;
-                border: none;
-                position: absolute;
-                right: 25px;
-            }
+
         }
+        .checkbtn{
+            display: block;
+        }
+
         .navbar-menu-container{
             position: fixed;
-            display: none;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            top: 65px;
+            left: -100%;
+            height: 100vh;
+            width: 100%;
+            background-color: $azul;
+            transition: all .5s;
             .navbar-menu{
+                display: flex;
                 flex-direction: column;
+                li{
+                    margin-bottom: 20px;
+                }
+                .navbar-links{
+                    font-size: 20px;
+
+                }
             }
         }
+        #check{
+            &:checked + .navbar-menu-container{
+                left: 0;
+                z-index: 10;
+
+            }
+        }
+
     }
 }
