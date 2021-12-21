@@ -1,13 +1,25 @@
 
 .icono{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
     padding-top: 40px;
     margin-left: 160px;
     color: $fontcolor;
     font-family: $font;
     font-size: 12px;
-    img{
-        height: 30px;
+    i{
+        font-size: 25px;
         padding-right: 10px;
+        color: $grisoscuro;
+        cursor: pointer;
+        &:hover{
+            color: $naranja;
+
+        }
+    }
+    p{
+        margin-top: 5px;
     }
 }
 .proyectos-title{
