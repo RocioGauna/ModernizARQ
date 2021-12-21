@@ -238,6 +238,70 @@
   height: 1000px;
 }
 
+.icono {
+  padding-top: 40px;
+  margin-left: 160px;
+  color: #FDFDFD;
+  font-family: "Young", sans-serif;
+  font-size: 12px;
+}
+
+.icono img {
+  height: 30px;
+  padding-right: 10px;
+}
+
+.proyectos-title {
+  text-transform: uppercase;
+  color: #FDFDFD;
+  margin-left: 200px;
+  font-family: "Young", sans-serif;
+  margin-top: 60px;
+}
+
+.proyectos-subtitle {
+  color: #FDFDFD;
+  margin-left: 200px;
+  font-family: "Young", sans-serif;
+  margin-top: 40px;
+  font-size: 15px;
+}
+
+.proyectos-cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 50px;
+  margin-top: 80px;
+}
+
+.proyecto-cards {
+  margin-bottom: 80px;
+  margin-right: 30px;
+  height: 300px;
+  width: 300px;
+  background-image: url(/IMG/cuadriculafotos.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 300px;
+}
+
+.proyecto-cards img {
+  height: 256px;
+  width: 254px;
+  margin-left: 23px;
+  margin-top: 21px;
+}
+
 * {
   margin: 0%;
   padding: 0%;
