@@ -20,6 +20,10 @@
     }
     p{
         margin-top: 5px;
+        a{
+            color: $fontcolor;
+            text-decoration: none;
+        }
     }
 }
 .proyectos-title{
@@ -43,8 +47,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-left: 50px;
-    margin-top: 80px
-;
+    margin-top: 80px;
 }
 .proyecto-cards{
     margin-bottom: 80px;
@@ -55,10 +58,112 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 300px;
-    img{
+
+    a{
+        text-decoration: none;
+        z-index: -10;
+
+    .proyecto-image{
         height: 256px;
         width: 254px;
         margin-left: 23px;
         margin-top: 21px;
+        position: relative;
+        &:hover{
+            opacity: 0.3;
+
+        }
+        &:hover + .info-hover{
+            display: block;
+        }
+    }
+    .info-hover{
+        display: none;
+        position: absolute;
+        margin-top: -220px;
+        margin-left: 50px;
+        font-family: $font;
+        color: $fontcolor;
+        z-index: -1;
+        &:hover{
+            display: block;
+        }
+        &:hover + .proyecto-image{
+            opacity: 0.3;
+        }
+
+        h3{
+            text-transform: uppercase;
+            font-size: 15px;
+            margin-bottom: 0;
+
+        }
+        p{
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+        .arrow{
+            position: absolute;
+            color: $naranja;
+            margin-left: 200px;
+            margin-top: 80px;
+
+        }
+
+    }
+
+
+}
+}
+
+// ESTILOS PARA CADA PROYECTO//
+
+.proyectos-details{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: $font;
+    color: $fontcolor;
+    font-size: 12px;
+    margin-top: 40px;
+    b{
+        font-size: 14px;
+        margin-right: 10px;
     }
 }
+.proyecto-info{
+    display: flex;
+    margin-top: 50px;
+    .proyecto-info-image{
+        margin-bottom: 80px;
+        margin-left: 200px;
+        margin-right: 30px;
+        height: 300px;
+        width: 300px;
+        background-image: url(/IMG/FOTO1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        img{
+            height: 256px;
+            width: 254px;
+            margin-left: 23px;
+            margin-top: 21px;
+            position: relative;
+
+        }
+    }
+    .proyecto-info-description{
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        margin-right: 150px;
+        font-family: $font;
+        color: $fontcolor;
+        margin-top: 80px;
+        
+        b{
+            margin-bottom: 20px;
+        }
+    }
+}
+
