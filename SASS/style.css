@@ -550,13 +550,20 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 65px;
+  width: 100%;
   margin-top: 50px;
 }
 
 .proyecto-info .proyecto-info-image {
-  margin-bottom: 80px;
-  margin-left: 120px;
-  margin-right: 30px;
+  padding-left: 30px;
 }
 
 .proyecto-info .proyecto-info-image img {
@@ -588,7 +595,13 @@
 }
 
 .proyecto-info .proyecto-info-description i {
-  position: absolute;
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #353D40;
   bottom: 50px;
   left: 60%;
@@ -603,6 +616,15 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 50px;
+}
+
+.container-pictures p {
+  font-family: "Young", sans-serif;
+  color: #FDFDFD;
+  text-transform: uppercase;
+  margin-left: 150px;
+  margin-bottom: 0;
 }
 
 .container-pictures .before-container {
@@ -615,13 +637,39 @@
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 20px;
+  width: 100%;
 }
 
 .container-pictures .before-container img {
   height: 300px;
+  margin-right: 60px;
+}
+
+.container-pictures .after-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.container-pictures .after-container img {
+  height: 300px;
+  margin-right: 60px;
+  margin-bottom: 50px;
 }
 
 * {
