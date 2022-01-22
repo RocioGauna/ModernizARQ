@@ -1,0 +1,163 @@
+//sacamos los checkbox
+#btnCardCheck1, #btnCardCheck2, #btnCardCheck3, #btnCardCheck4, #btnCardCheck5, #btnCardCheck6, #btnCardCheck7, #btnCardCheck8{
+    display: none;
+}
+
+//card con el texto alternativo
+#btnCardCheck1:checked ~ #contenedorCards .card1, #btnCardCheck2:checked ~ #contenedorCards .card2, #btnCardCheck3:checked ~ #contenedorCards .card3, #btnCardCheck4:checked ~ #contenedorCards .card4, #btnCardCheck5:checked ~ #contenedorCards .card5, #btnCardCheck6:checked ~ #contenedorCards .card6, #btnCardCheck7:checked ~ #contenedorCards .card7, #btnCardCheck8:checked ~ #contenedorCards .card8{
+    width: 36rem;
+    
+}
+
+#btnCardCheck1:checked ~ #contenedorCards .card1 .contDescrip, #btnCardCheck2:checked ~ #contenedorCards .card2 .contDescrip, #btnCardCheck3:checked ~ #contenedorCards .card3 .contDescrip, #btnCardCheck4:checked ~ #contenedorCards .card4 .contDescrip, #btnCardCheck5:checked ~ #contenedorCards .card5 .contDescrip, #btnCardCheck6:checked ~ #contenedorCards .card6 .contDescrip, #btnCardCheck7:checked ~ #contenedorCards .card7 .contDescrip, #btnCardCheck8:checked ~ #contenedorCards .card8 .contDescrip{
+    grid-template-areas: "txtCard linkCard";
+    opacity: 1;
+    transition: 1.5s;
+}
+
+#btnCardCheck1:checked ~ #contenedorCards .card1 .cardTxtAl, #btnCardCheck2:checked ~ #contenedorCards .card2 .cardTxtAl, #btnCardCheck3:checked ~ #contenedorCards .card3 .cardTxtAl, #btnCardCheck4:checked ~ #contenedorCards .card4 .cardTxtAl, #btnCardCheck5:checked ~ #contenedorCards .card5 .cardTxtAl, #btnCardCheck6:checked ~ #contenedorCards .card6 .cardTxtAl, #btnCardCheck7:checked ~ #contenedorCards .card7 .cardTxtAl, #btnCardCheck8:checked ~ #contenedorCards .card8 .cardTxtAl{
+    visibility: visible;
+    opacity: 1;
+    transition: 1.5s;
+    
+}
+
+#btnCardCheck1:checked ~ #contenedorCards .card1 .verMas, #btnCardCheck2:checked ~ #contenedorCards .card2 .verMas, #btnCardCheck3:checked ~ #contenedorCards .card3 .verMas,#btnCardCheck4:checked ~ #contenedorCards .card4 .verMas, #btnCardCheck5:checked ~ #contenedorCards .card5 .verMas, #btnCardCheck6:checked ~ #contenedorCards .card6 .verMas,#btnCardCheck7:checked ~ #contenedorCards .card7 .verMas, #btnCardCheck8:checked ~ #contenedorCards .card8 .verMas{
+    visibility: hidden;
+}
+
+
+#btnCardCheck1:checked ~ #contenedorCards .card1 .verMas::before, #btnCardCheck2:checked ~ #contenedorCards .card2 .verMas::before, #btnCardCheck3:checked ~ #contenedorCards .card3 .verMas::before, #btnCardCheck4:checked ~ #contenedorCards .card4 .verMas::before, #btnCardCheck5:checked ~ #contenedorCards .card5 .verMas::before, #btnCardCheck6:checked ~ #contenedorCards .card6 .verMas::before, #btnCardCheck7:checked ~ #contenedorCards .card7 .verMas::before, #btnCardCheck8:checked ~ #contenedorCards .card8 .verMas::before{
+    visibility: visible;
+    content: "<";
+    float: right;
+    background-color: $naranja;
+    border-radius: 100%;
+    padding: 0 15px 3px 15px;
+    font-family: cursive;
+    font-size: 30px;
+    
+}
+
+
+.main-container-servicios{
+    font-family: $font;
+    color: $blanco;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 20px 50px 50px 50px;
+
+    .div-texts{
+        .div-h2{
+            font-size: 40px;
+        }
+
+        .div-parrafo{
+            padding: 10px 0 10px 0;
+        }
+    }
+
+    #contenedorCards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8{
+            width: 16.4rem;
+            height: 16.4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 20px;
+            margin: 50px;
+            transition: 1s ease;
+
+            .contenedorTxt{
+                text-align: left;
+                height: 90%;
+
+                .txtH3{
+                    border-bottom: 1px solid white;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    font-size: 18px;
+                    color: $blanco;
+                }
+
+                .contCardDescrip{
+                    
+                    .contDescrip{
+                        display: grid;
+                        grid-template-columns: 68% 32%;
+                        grid-template-areas: "txtCard txtCard";
+                        .contTxtCard{
+                            grid-area: txtCard;
+
+                            .cardTxt{
+                                color: white;
+                                padding-top: 10px;
+                                font-size: 13px;
+                            }
+            
+                            .cardTxtAl{
+                                visibility: hidden;
+                                opacity: 0;
+                                color: white;
+                                font-size: 13px;
+                                transition: 0.2s;
+                            }
+                        }
+
+                        .contLinks{
+                            padding-top: 5px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            grid-area: linkCard;
+                            visibility: hidden;
+                            opacity: 0;
+
+
+                            a{
+                                margin: 2px;
+                                color:white;
+                                text-decoration: none;
+                                width: 80%;
+                                border-radius: 20px;
+                                text-align: center;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .borderDi{
+                border-left: 1px solid rgb(255, 246, 246);
+                border-right: 1px solid rgb(255, 255, 255);
+                width: 100%;
+                height: 120%;
+                position: absolute;
+                z-index: -1;
+            }
+        
+            .borderAa{
+                border-top: 1px solid rgb(255, 255, 255);
+                border-bottom: 1px solid rgb(255, 255, 255);
+                width: 120%;
+                height: 100%;
+                position: absolute;
+                z-index: -1;
+            }
+      
+            .btn-ver{
+                width: 100%;
+            }
+        }
+
+    }
+}

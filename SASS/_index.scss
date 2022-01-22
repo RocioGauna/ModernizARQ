@@ -1,0 +1,159 @@
+.main-container-index{
+    font-size: $font;
+    color: $blanco;
+    
+    .div-sobre-nosotros{
+        display: flex;
+        align-items: center;
+        margin: 70px 70px 0 70px;
+    
+        .div-sobre-nosotros-textos{
+            h2{
+                width: 30%;
+                font-size: 40px;
+                padding-bottom: 10px;
+            }
+    
+            p{
+                width: 70%;
+            }
+        }
+    
+        .div-sobre-nosotros-contacto{
+            .div-sobre-nosotros-btn{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                p{
+                    padding-top: 8px;
+                    text-align: center;
+                }
+    
+                button{
+                    background-color: $naranja;
+                    color: $azul;
+                    font-weight: 500;
+                    border-radius: 10px;
+                    border: none;
+                    padding: 10px;
+                    width: 180px;
+                }
+    
+                button:hover{
+                    color: $blanco;
+                    background-color: $azul;
+                }
+            }
+        }
+    }
+
+    .div-proyectos{
+        padding-top: 20px;
+        margin: 70px;
+        color: $blanco;
+        font-size: $font;
+
+        .div-proyectos-textos{
+            h2{
+                font-size: 40px;
+            }
+
+            .div-proyectos-link{
+                display: flex;
+                align-items: center;
+
+                a{
+                    color: $naranja;
+                    font-size: 20px;
+                    font-weight: 500;
+                    text-decoration: none;
+                }
+    
+                a:hover{
+                    color: $azul;
+                }
+
+                .fas{
+                   color: $naranja;
+                   padding-left: 8px;
+                }
+
+                .fas:hover{
+                    color: $azul;
+                }
+            }
+        }
+
+        .proyectos-cards{
+            display: flex;
+            justify-content: center;
+
+
+            .cards-proyectos{
+                margin: 40px;
+                padding-top: 26px;
+                height: 400px;
+                width: 400px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 400px;
+                background-image: url(../IMG/cuadriculafotos.png);
+               
+
+                    a{
+                        text-decoration: none;
+                        z-index: -10;
+                
+                    .proyecto-image{
+                        width: 342px;
+                        margin-left: 10px;
+                        position: relative;
+                        &:hover{
+                            opacity: 0.3;
+                
+                        }
+                        &:hover + .info-hover{
+                            display: block;
+                            opacity: 1;
+                        }
+                    }
+
+                    .info-hover{
+                        display: none;
+                        position: absolute;
+                        margin-top: -300px;
+                        margin-left: 50px;
+                        font-family: $font;
+                        color: $fontcolor;
+                        z-index: -1;
+                    
+                        h3{
+                            text-transform: uppercase;
+                            font-size: 20px;
+                            margin-bottom: 0;
+                
+                        }
+                        p{
+                            font-size: 15px;
+                            margin-bottom: 0;
+                        }
+                        .arrow{
+                            position: absolute;
+                            color: $naranja;
+                            margin-left: 270px;
+                            margin-top: 80px;
+                        }
+
+                        &:hover{
+                            display: block;
+                        }
+                        &:hover + .proyecto-image{
+                            opacity: 0.3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

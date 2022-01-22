@@ -1,0 +1,45 @@
+// VARIABLES
+@import "var";
+
+// ESTILOS: NAVBAR Y FOOTER
+@import "navbar";
+@import "footer";
+
+// ESTILOS: SECCIONES
+@import "contacto";
+@import "index";
+@import "nosotros";
+@import "proyectos";
+@import "servicios";
+
+// RESETS: GENERALES
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html, body{
+    min-height:100%;
+   }
+
+  body {
+     background: -webkit-linear-gradient(rgba(53,61,64,1),rgba(161,165,166,1));
+     background: -o-linear-gradient(rgba(53,61,64,1),rgba(161,165,166,1));
+     background: -moz-linear-gradient(rgba(53,61,64,1),rgba(161,165,166,1));
+     background: linear-gradient(rgba(53,61,64,1),rgba(161,165,166,1));
+     margin:0px !important;
+     ul{
+         li{
+             list-style: none;
+             a{
+                 text-decoration: none;
+             }
+         }
+     }
+
+   }
+
+
+
+
+

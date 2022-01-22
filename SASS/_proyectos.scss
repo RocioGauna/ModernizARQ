@@ -1,0 +1,229 @@
+
+.icono{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding-top: 40px;
+    margin-left: 60px;
+    color: $fontcolor;
+    font-family: $font;
+    font-size: 12px;
+    i{
+        font-size: 25px;
+        padding-right: 10px;
+        color: $grisoscuro;
+        cursor: pointer;
+        &:hover{
+            color: $naranja;
+
+        }
+    }
+    p{
+        margin-top: 5px;
+        a{
+            color: $fontcolor;
+            text-decoration: none;
+        }
+    }
+}
+
+.textos-proyectos{
+    font-family: $font;
+    color: $blanco;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 20px 50px 50px 50px;
+
+    .proyectos-title{
+        font-size: 40px;
+    }
+    .proyectos-subtitle{
+        padding: 10px 0 10px 0;
+    }
+}
+
+.proyectos-cards-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+.proyecto-cards{
+    margin-bottom: 80px;
+    margin-right: 30px;
+    height: 300px;
+    width: 300px;
+    background-image: url(../IMG/cuadriculafotos.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
+
+    a{
+        text-decoration: none;
+        z-index: -10;
+
+    .proyecto-image{
+        object-fit: cover;
+        height: 256px;
+        width: 254px;
+        margin-left: 23px;
+        margin-top: 21px;
+        position: relative;
+        &:hover{
+            opacity: 0.3;
+
+        }
+        &:hover + .info-hover{
+            display: block;
+            opacity: 1;
+        }
+    }
+    .info-hover{
+        display: none;
+        position: absolute;
+        margin-top: -220px;
+        margin-left: 50px;
+        font-family: $font;
+        color: $fontcolor;
+        z-index: -1;
+        &:hover{
+            display: block;
+        }
+        &:hover + .proyecto-image{
+            opacity: 0.3;
+        }
+
+        h3{
+            text-transform: uppercase;
+            font-size: 15px;
+            margin-bottom: 0;
+
+        }
+        p{
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+        .arrow{
+            position: absolute;
+            color: $naranja;
+            margin-left: 200px;
+            margin-top: 80px;
+
+        }
+
+    }
+
+
+}
+}
+
+// ESTILOS PARA CADA PROYECTO//
+.proyectos-titles{
+    font-family: $font;
+    color: $blanco;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 20px 50px 30px 50px;
+}
+
+.proyectos-details{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: $font;
+    color: $fontcolor;
+    font-size: 19px;
+    margin-left: 20px;
+    b{
+        font-size: 23px;
+        margin-right: 10px;
+    }
+}
+.proyecto-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 65px;
+    width: 100%;
+    margin-top: 50px;
+    .proyecto-info-image{
+        padding-left: 30px;
+        img{
+            height: 300px;
+            margin-left: 35px;
+            margin-top: 10px;
+            position: relative;
+
+        }
+
+    }
+    .proyecto-info-description{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-left: 120px;
+        margin-right: 150px;
+        font-family: $font;
+        color: $fontcolor;
+        margin-top: 80px;
+        b{
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        p{
+            width: 800px;
+        }
+        i{
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $grisoscuro;
+            bottom: 50px;
+            left: 60%;
+            font-size: 25px;
+        }
+    }
+}
+
+.container-pictures{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+
+    p{
+        font-family: $font;
+        color: $fontcolor;
+        text-transform: uppercase;
+        margin-left: 100px;
+        margin-bottom: 0;
+    }
+
+
+    .before-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 20px;
+        width: 100%;
+        img{
+            height: 300px;
+            margin-right: 60px;
+        }
+    }
+    .after-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 20px;
+        width: 100%;
+        
+        img{
+            height: 300px;
+            margin-right: 60px;
+            margin-bottom: 50px;
+        }
+    }
+}
+

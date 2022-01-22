@@ -1,0 +1,849 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: sticky;
+  background-color: #353d40;
+  top: 0;
+  border-bottom: 1px solid white;
+  z-index: 10;
+}
+
+.navbar-container .navbar-logo {
+  margin-left: 50px;
+}
+
+.navbar-container .navbar-logo a {
+  text-decoration: none;
+}
+
+.navbar-container .checkbtn {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+.navbar-container #check {
+  display: none;
+}
+
+.navbar-container .navbar-menu-container {
+  display: flex;
+  align-self: center;
+  margin-top: 30px;
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-container .navbar-menu-container .navbar-menu {
+  display: flex;
+}
+
+.navbar-container .navbar-menu-container .navbar-menu li {
+  margin-right: 35px;
+}
+
+.navbar-container .navbar-menu-container .navbar-menu .navbar-links {
+  font-family: "Young", sans-serif;
+  color: #FDFDFD;
+  font-size: 15px;
+}
+
+.navbar-container .navbar-menu-container .navbar-menu .navbar-links:hover {
+  color: #F2B138;
+}
+
+.navbar-container .navbar-menu-container .navbar-menu .current {
+  font-family: "Young", sans-serif;
+  color: #F2B138;
+  font-size: 15px;
+}
+
+.navbar-container .navbar-menu-container .navbar-menu .current:hover {
+  color: #F2B138;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-container .navbar-logo {
+    display: flex;
+    justify-content: center;
+  }
+  .navbar-container .checkbtn {
+    display: block;
+  }
+  .navbar-container .navbar-menu-container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    top: 65px;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    background-color: #003F63;
+    transition: all .5s;
+  }
+  .navbar-container .navbar-menu-container .navbar-menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-container .navbar-menu-container .navbar-menu li {
+    margin-bottom: 20px;
+  }
+  .navbar-container .navbar-menu-container .navbar-menu .navbar-links {
+    font-size: 20px;
+  }
+  .navbar-container #check:checked + .navbar-menu-container {
+    left: 0;
+    z-index: 10;
+  }
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  border-top: 1px solid white;
+}
+
+.footer-container .footer-logo img {
+  height: 90px;
+  opacity: 1;
+}
+
+.footer-container .footer-info {
+  font-family: "Young", sans-serif;
+  font-size: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+  color: #FDFDFD;
+  text-align: center;
+  letter-spacing: 0px;
+  opacity: 1;
+  align-self: center;
+}
+
+.footer-container .footer-social {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+.footer-container .footer-social img {
+  margin-right: 20px;
+  height: 20px;
+}
+
+.footer-container .footer-social p {
+  font-family: "Young", sans-serif;
+  color: black;
+  color: #FDFDFD;
+  text-align: left;
+  letter-spacing: 0px;
+  opacity: 1;
+  align-self: center;
+  font-size: 10px;
+  margin-right: 20px;
+}
+
+@media (max-width: 660px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer-container .footer-logo {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  .footer-container .footer-info {
+    margin-bottom: 20px;
+  }
+  .footer-container .footer-social {
+    margin-bottom: 10px;
+  }
+}
+
+.main-container {
+  font-family: "Young", sans-serif;
+  color: #FDFDFD;
+  display: grid;
+  grid-template-areas: "in put";
+  grid-template-columns: repeat(2, 1fr);
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 20px 50px 50px 50px;
+}
+
+.main-container .main-texts {
+  grid-area: in;
+}
+
+.main-container .main-texts .main-h2 {
+  font-size: 25px;
+}
+
+.main-container .main-texts .main-parrafo {
+  padding-top: 30px;
+}
+
+.main-container .main-texts .main-parrafo p {
+  padding: 10px 0 10px 0;
+}
+
+.main-container .main-input {
+  grid-area: put;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container .main-input h2 {
+  color: #F2B138;
+  text-align: center;
+  padding: 30px 0 30px 0;
+}
+
+.main-container .main-input .main-form-general {
+  position: relative;
+}
+
+.main-container .main-input .main-form-general .main-form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.main-container .main-input .main-form-general .main-form label {
+  padding: 15px 0 20px 0px;
+}
+
+.main-container .main-input .main-form-general .main-form input, .main-container .main-input .main-form-general .main-form textarea {
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  font-size: 15px;
+  font-family: "Young", sans-serif;
+  color: white;
+  padding-bottom: 5px;
+}
+
+.main-container .main-input .main-form-general .main-form button {
+  background: #a1a5a6;
+  color: white;
+  width: 150px;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 6px 6px #00000029;
+}
+
+.main-container .main-input .main-form-general .main-form button:hover {
+  background: #F2B138;
+}
+
+.main-container .main-input .main-form-general .main-ventana {
+  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.main-container .main-input .main-form-general .main-ventana .main-ventana-textos h3 {
+  padding: 10px 0 100px 0;
+}
+
+.main-container .main-input .main-form-general .show {
+  pointer-events: auto;
+  opacity: 1;
+  position: relative;
+  transition: 2s;
+}
+
+.main-container-index {
+  font-size: "Young", sans-serif;
+  color: #FDFDFD;
+}
+
+.main-container-index .div-sobre-nosotros {
+  display: flex;
+  align-items: center;
+  margin: 70px 70px 0 70px;
+}
+
+.main-container-index .div-sobre-nosotros .div-sobre-nosotros-textos h2 {
+  width: 30%;
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+
+.main-container-index .div-sobre-nosotros .div-sobre-nosotros-textos p {
+  width: 70%;
+}
+
+.main-container-index .div-sobre-nosotros .div-sobre-nosotros-contacto .div-sobre-nosotros-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container-index .div-sobre-nosotros .div-sobre-nosotros-contacto .div-sobre-nosotros-btn p {
+  padding-top: 8px;
+  text-align: center;
+}
+
+.main-container-index .div-sobre-nosotros .div-sobre-nosotros-contacto .div-sobre-nosotros-btn button {
+  background-color: #F2B138;
+  color: #003F63;
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  width: 180px;
+}
+
+.main-container-index .div-sobre-nosotros .div-sobre-nosotros-contacto .div-sobre-nosotros-btn button:hover {
+  color: #FDFDFD;
+  background-color: #003F63;
+}
+
+.main-container-index .div-proyectos {
+  padding-top: 20px;
+  margin: 70px;
+  color: #FDFDFD;
+  font-size: "Young", sans-serif;
+}
+
+.main-container-index .div-proyectos .div-proyectos-textos h2 {
+  font-size: 40px;
+}
+
+.main-container-index .div-proyectos .div-proyectos-textos .div-proyectos-link {
+  display: flex;
+  align-items: center;
+}
+
+.main-container-index .div-proyectos .div-proyectos-textos .div-proyectos-link a {
+  color: #F2B138;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.main-container-index .div-proyectos .div-proyectos-textos .div-proyectos-link a:hover {
+  color: #003F63;
+}
+
+.main-container-index .div-proyectos .div-proyectos-textos .div-proyectos-link .fas {
+  color: #F2B138;
+  padding-left: 8px;
+}
+
+.main-container-index .div-proyectos .div-proyectos-textos .div-proyectos-link .fas:hover {
+  color: #003F63;
+}
+
+.main-container-index .div-proyectos .proyectos-cards {
+  display: flex;
+  justify-content: center;
+}
+
+.main-container-index .div-proyectos .proyectos-cards .cards-proyectos {
+  margin: 40px;
+  padding-top: 26px;
+  height: 400px;
+  width: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 400px;
+  background-image: url(../IMG/cuadriculafotos.png);
+}
+
+.main-container-index .div-proyectos .proyectos-cards .cards-proyectos a {
+  text-decoration: none;
+  z-index: -10;
+}
+
+.main-container-index .div-proyectos .proyectos-cards .cards-proyectos a .proyecto-image {
+  width: 342px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.main-container-index .div-proyectos .proyectos-cards .cards-proyectos a .proyecto-image:hover {
+  opacity: 0.3;
+}
+
+.main-container-index .div-proyectos .proyectos-cards .cards-proyectos a .proyecto-image:hover + .info-hover {
+  display: block;
+  opacity: 1;
+}
+
+.main-container-index .div-proyectos .proyectos-cards .cards-proyectos a .info-hover {
+  display: none;
+  position: absolute;
+  margin-top: -300px;
+  margin-left: 50px;
+  font-family: "Young", sans-serif;
+  color: #FDFDFD;
+  z-index: -1;
+}
+
+.main-container-index .div-proyectos .proyectos-cards .cards-proyectos a .info-hover h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.main-container-index .div-proyectos .proyectos-cards .cards-proyectos a .info-hover p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.main-container-index .div-proyectos .proyectos-cards .cards-proyectos a .info-hover .arrow {
+  position: absolute;
+  color: #F2B138;
+  margin-left: 270px;
+  margin-top: 80px;
+}
+
+.main-container-index .div-proyectos .proyectos-cards .cards-proyectos a .info-hover:hover {
+  display: block;
+}
+
+.main-container-index .div-proyectos .proyectos-cards .cards-proyectos a .info-hover:hover + .proyecto-image {
+  opacity: 0.3;
+}
+
+.icono {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding-top: 40px;
+  margin-left: 60px;
+  color: #FDFDFD;
+  font-family: "Young", sans-serif;
+  font-size: 12px;
+}
+
+.icono i {
+  font-size: 25px;
+  padding-right: 10px;
+  color: #353D40;
+  cursor: pointer;
+}
+
+.icono i:hover {
+  color: #F2B138;
+}
+
+.icono p {
+  margin-top: 5px;
+}
+
+.icono p a {
+  color: #FDFDFD;
+  text-decoration: none;
+}
+
+.textos-proyectos {
+  font-family: "Young", sans-serif;
+  color: #FDFDFD;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 20px 50px 50px 50px;
+}
+
+.textos-proyectos .proyectos-title {
+  font-size: 40px;
+}
+
+.textos-proyectos .proyectos-subtitle {
+  padding: 10px 0 10px 0;
+}
+
+.proyectos-cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+.proyecto-cards {
+  margin-bottom: 80px;
+  margin-right: 30px;
+  height: 300px;
+  width: 300px;
+  background-image: url(../IMG/cuadriculafotos.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 300px;
+}
+
+.proyecto-cards a {
+  text-decoration: none;
+  z-index: -10;
+}
+
+.proyecto-cards a .proyecto-image {
+  object-fit: cover;
+  height: 256px;
+  width: 254px;
+  margin-left: 23px;
+  margin-top: 21px;
+  position: relative;
+}
+
+.proyecto-cards a .proyecto-image:hover {
+  opacity: 0.3;
+}
+
+.proyecto-cards a .proyecto-image:hover + .info-hover {
+  display: block;
+  opacity: 1;
+}
+
+.proyecto-cards a .info-hover {
+  display: none;
+  position: absolute;
+  margin-top: -220px;
+  margin-left: 50px;
+  font-family: "Young", sans-serif;
+  color: #FDFDFD;
+  z-index: -1;
+}
+
+.proyecto-cards a .info-hover:hover {
+  display: block;
+}
+
+.proyecto-cards a .info-hover:hover + .proyecto-image {
+  opacity: 0.3;
+}
+
+.proyecto-cards a .info-hover h3 {
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.proyecto-cards a .info-hover p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.proyecto-cards a .info-hover .arrow {
+  position: absolute;
+  color: #F2B138;
+  margin-left: 200px;
+  margin-top: 80px;
+}
+
+.proyectos-titles {
+  font-family: "Young", sans-serif;
+  color: #FDFDFD;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 20px 50px 30px 50px;
+}
+
+.proyectos-details {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Young", sans-serif;
+  color: #FDFDFD;
+  font-size: 19px;
+  margin-left: 20px;
+}
+
+.proyectos-details b {
+  font-size: 23px;
+  margin-right: 10px;
+}
+
+.proyecto-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 65px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.proyecto-info .proyecto-info-image {
+  padding-left: 30px;
+}
+
+.proyecto-info .proyecto-info-image img {
+  height: 300px;
+  margin-left: 35px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.proyecto-info .proyecto-info-description {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 120px;
+  margin-right: 150px;
+  font-family: "Young", sans-serif;
+  color: #FDFDFD;
+  margin-top: 80px;
+}
+
+.proyecto-info .proyecto-info-description b {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.proyecto-info .proyecto-info-description p {
+  width: 800px;
+}
+
+.proyecto-info .proyecto-info-description i {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #353D40;
+  bottom: 50px;
+  left: 60%;
+  font-size: 25px;
+}
+
+.container-pictures {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.container-pictures p {
+  font-family: "Young", sans-serif;
+  color: #FDFDFD;
+  text-transform: uppercase;
+  margin-left: 100px;
+  margin-bottom: 0;
+}
+
+.container-pictures .before-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.container-pictures .before-container img {
+  height: 300px;
+  margin-right: 60px;
+}
+
+.container-pictures .after-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.container-pictures .after-container img {
+  height: 300px;
+  margin-right: 60px;
+  margin-bottom: 50px;
+}
+
+#btnCardCheck1, #btnCardCheck2, #btnCardCheck3, #btnCardCheck4, #btnCardCheck5, #btnCardCheck6, #btnCardCheck7, #btnCardCheck8 {
+  display: none;
+}
+
+#btnCardCheck1:checked ~ #contenedorCards .card1, #btnCardCheck2:checked ~ #contenedorCards .card2, #btnCardCheck3:checked ~ #contenedorCards .card3, #btnCardCheck4:checked ~ #contenedorCards .card4, #btnCardCheck5:checked ~ #contenedorCards .card5, #btnCardCheck6:checked ~ #contenedorCards .card6, #btnCardCheck7:checked ~ #contenedorCards .card7, #btnCardCheck8:checked ~ #contenedorCards .card8 {
+  width: 36rem;
+}
+
+#btnCardCheck1:checked ~ #contenedorCards .card1 .contDescrip, #btnCardCheck2:checked ~ #contenedorCards .card2 .contDescrip, #btnCardCheck3:checked ~ #contenedorCards .card3 .contDescrip, #btnCardCheck4:checked ~ #contenedorCards .card4 .contDescrip, #btnCardCheck5:checked ~ #contenedorCards .card5 .contDescrip, #btnCardCheck6:checked ~ #contenedorCards .card6 .contDescrip, #btnCardCheck7:checked ~ #contenedorCards .card7 .contDescrip, #btnCardCheck8:checked ~ #contenedorCards .card8 .contDescrip {
+  grid-template-areas: "txtCard linkCard";
+  opacity: 1;
+  transition: 1.5s;
+}
+
+#btnCardCheck1:checked ~ #contenedorCards .card1 .cardTxtAl, #btnCardCheck2:checked ~ #contenedorCards .card2 .cardTxtAl, #btnCardCheck3:checked ~ #contenedorCards .card3 .cardTxtAl, #btnCardCheck4:checked ~ #contenedorCards .card4 .cardTxtAl, #btnCardCheck5:checked ~ #contenedorCards .card5 .cardTxtAl, #btnCardCheck6:checked ~ #contenedorCards .card6 .cardTxtAl, #btnCardCheck7:checked ~ #contenedorCards .card7 .cardTxtAl, #btnCardCheck8:checked ~ #contenedorCards .card8 .cardTxtAl {
+  visibility: visible;
+  opacity: 1;
+  transition: 1.5s;
+}
+
+#btnCardCheck1:checked ~ #contenedorCards .card1 .verMas, #btnCardCheck2:checked ~ #contenedorCards .card2 .verMas, #btnCardCheck3:checked ~ #contenedorCards .card3 .verMas, #btnCardCheck4:checked ~ #contenedorCards .card4 .verMas, #btnCardCheck5:checked ~ #contenedorCards .card5 .verMas, #btnCardCheck6:checked ~ #contenedorCards .card6 .verMas, #btnCardCheck7:checked ~ #contenedorCards .card7 .verMas, #btnCardCheck8:checked ~ #contenedorCards .card8 .verMas {
+  visibility: hidden;
+}
+
+#btnCardCheck1:checked ~ #contenedorCards .card1 .verMas::before, #btnCardCheck2:checked ~ #contenedorCards .card2 .verMas::before, #btnCardCheck3:checked ~ #contenedorCards .card3 .verMas::before, #btnCardCheck4:checked ~ #contenedorCards .card4 .verMas::before, #btnCardCheck5:checked ~ #contenedorCards .card5 .verMas::before, #btnCardCheck6:checked ~ #contenedorCards .card6 .verMas::before, #btnCardCheck7:checked ~ #contenedorCards .card7 .verMas::before, #btnCardCheck8:checked ~ #contenedorCards .card8 .verMas::before {
+  visibility: visible;
+  content: "<";
+  float: right;
+  background-color: #F2B138;
+  border-radius: 100%;
+  padding: 0 15px 3px 15px;
+  font-family: cursive;
+  font-size: 30px;
+}
+
+.main-container-servicios {
+  font-family: "Young", sans-serif;
+  color: #FDFDFD;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 20px 50px 50px 50px;
+}
+
+.main-container-servicios .div-texts .div-h2 {
+  font-size: 40px;
+}
+
+.main-container-servicios .div-texts .div-parrafo {
+  padding: 10px 0 10px 0;
+}
+
+.main-container-servicios #contenedorCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-container-servicios #contenedorCards .card1, .main-container-servicios #contenedorCards .card2, .main-container-servicios #contenedorCards .card3, .main-container-servicios #contenedorCards .card4, .main-container-servicios #contenedorCards .card5, .main-container-servicios #contenedorCards .card6, .main-container-servicios #contenedorCards .card7, .main-container-servicios #contenedorCards .card8 {
+  width: 16.4rem;
+  height: 16.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  margin: 50px;
+  transition: 1s ease;
+}
+
+.main-container-servicios #contenedorCards .card1 .contenedorTxt, .main-container-servicios #contenedorCards .card2 .contenedorTxt, .main-container-servicios #contenedorCards .card3 .contenedorTxt, .main-container-servicios #contenedorCards .card4 .contenedorTxt, .main-container-servicios #contenedorCards .card5 .contenedorTxt, .main-container-servicios #contenedorCards .card6 .contenedorTxt, .main-container-servicios #contenedorCards .card7 .contenedorTxt, .main-container-servicios #contenedorCards .card8 .contenedorTxt {
+  text-align: left;
+  height: 90%;
+}
+
+.main-container-servicios #contenedorCards .card1 .contenedorTxt .txtH3, .main-container-servicios #contenedorCards .card2 .contenedorTxt .txtH3, .main-container-servicios #contenedorCards .card3 .contenedorTxt .txtH3, .main-container-servicios #contenedorCards .card4 .contenedorTxt .txtH3, .main-container-servicios #contenedorCards .card5 .contenedorTxt .txtH3, .main-container-servicios #contenedorCards .card6 .contenedorTxt .txtH3, .main-container-servicios #contenedorCards .card7 .contenedorTxt .txtH3, .main-container-servicios #contenedorCards .card8 .contenedorTxt .txtH3 {
+  border-bottom: 1px solid white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  color: #FDFDFD;
+}
+
+.main-container-servicios #contenedorCards .card1 .contenedorTxt .contCardDescrip .contDescrip, .main-container-servicios #contenedorCards .card2 .contenedorTxt .contCardDescrip .contDescrip, .main-container-servicios #contenedorCards .card3 .contenedorTxt .contCardDescrip .contDescrip, .main-container-servicios #contenedorCards .card4 .contenedorTxt .contCardDescrip .contDescrip, .main-container-servicios #contenedorCards .card5 .contenedorTxt .contCardDescrip .contDescrip, .main-container-servicios #contenedorCards .card6 .contenedorTxt .contCardDescrip .contDescrip, .main-container-servicios #contenedorCards .card7 .contenedorTxt .contCardDescrip .contDescrip, .main-container-servicios #contenedorCards .card8 .contenedorTxt .contCardDescrip .contDescrip {
+  display: grid;
+  grid-template-columns: 68% 32%;
+  grid-template-areas: "txtCard txtCard";
+}
+
+.main-container-servicios #contenedorCards .card1 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard, .main-container-servicios #contenedorCards .card2 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard, .main-container-servicios #contenedorCards .card3 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard, .main-container-servicios #contenedorCards .card4 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard, .main-container-servicios #contenedorCards .card5 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard, .main-container-servicios #contenedorCards .card6 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard, .main-container-servicios #contenedorCards .card7 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard, .main-container-servicios #contenedorCards .card8 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard {
+  grid-area: txtCard;
+}
+
+.main-container-servicios #contenedorCards .card1 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard .cardTxt, .main-container-servicios #contenedorCards .card2 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard .cardTxt, .main-container-servicios #contenedorCards .card3 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard .cardTxt, .main-container-servicios #contenedorCards .card4 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard .cardTxt, .main-container-servicios #contenedorCards .card5 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard .cardTxt, .main-container-servicios #contenedorCards .card6 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard .cardTxt, .main-container-servicios #contenedorCards .card7 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard .cardTxt, .main-container-servicios #contenedorCards .card8 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard .cardTxt {
+  color: white;
+  padding-top: 10px;
+  font-size: 13px;
+}
+
+.main-container-servicios #contenedorCards .card1 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard .cardTxtAl, .main-container-servicios #contenedorCards .card2 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard .cardTxtAl, .main-container-servicios #contenedorCards .card3 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard .cardTxtAl, .main-container-servicios #contenedorCards .card4 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard .cardTxtAl, .main-container-servicios #contenedorCards .card5 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard .cardTxtAl, .main-container-servicios #contenedorCards .card6 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard .cardTxtAl, .main-container-servicios #contenedorCards .card7 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard .cardTxtAl, .main-container-servicios #contenedorCards .card8 .contenedorTxt .contCardDescrip .contDescrip .contTxtCard .cardTxtAl {
+  visibility: hidden;
+  opacity: 0;
+  color: white;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.main-container-servicios #contenedorCards .card1 .contenedorTxt .contCardDescrip .contDescrip .contLinks, .main-container-servicios #contenedorCards .card2 .contenedorTxt .contCardDescrip .contDescrip .contLinks, .main-container-servicios #contenedorCards .card3 .contenedorTxt .contCardDescrip .contDescrip .contLinks, .main-container-servicios #contenedorCards .card4 .contenedorTxt .contCardDescrip .contDescrip .contLinks, .main-container-servicios #contenedorCards .card5 .contenedorTxt .contCardDescrip .contDescrip .contLinks, .main-container-servicios #contenedorCards .card6 .contenedorTxt .contCardDescrip .contDescrip .contLinks, .main-container-servicios #contenedorCards .card7 .contenedorTxt .contCardDescrip .contDescrip .contLinks, .main-container-servicios #contenedorCards .card8 .contenedorTxt .contCardDescrip .contDescrip .contLinks {
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-area: linkCard;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.main-container-servicios #contenedorCards .card1 .contenedorTxt .contCardDescrip .contDescrip .contLinks a, .main-container-servicios #contenedorCards .card2 .contenedorTxt .contCardDescrip .contDescrip .contLinks a, .main-container-servicios #contenedorCards .card3 .contenedorTxt .contCardDescrip .contDescrip .contLinks a, .main-container-servicios #contenedorCards .card4 .contenedorTxt .contCardDescrip .contDescrip .contLinks a, .main-container-servicios #contenedorCards .card5 .contenedorTxt .contCardDescrip .contDescrip .contLinks a, .main-container-servicios #contenedorCards .card6 .contenedorTxt .contCardDescrip .contDescrip .contLinks a, .main-container-servicios #contenedorCards .card7 .contenedorTxt .contCardDescrip .contDescrip .contLinks a, .main-container-servicios #contenedorCards .card8 .contenedorTxt .contCardDescrip .contDescrip .contLinks a {
+  margin: 2px;
+  color: white;
+  text-decoration: none;
+  width: 80%;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.main-container-servicios #contenedorCards .card1 .borderDi, .main-container-servicios #contenedorCards .card2 .borderDi, .main-container-servicios #contenedorCards .card3 .borderDi, .main-container-servicios #contenedorCards .card4 .borderDi, .main-container-servicios #contenedorCards .card5 .borderDi, .main-container-servicios #contenedorCards .card6 .borderDi, .main-container-servicios #contenedorCards .card7 .borderDi, .main-container-servicios #contenedorCards .card8 .borderDi {
+  border-left: 1px solid #fff6f6;
+  border-right: 1px solid white;
+  width: 100%;
+  height: 120%;
+  position: absolute;
+  z-index: -1;
+}
+
+.main-container-servicios #contenedorCards .card1 .borderAa, .main-container-servicios #contenedorCards .card2 .borderAa, .main-container-servicios #contenedorCards .card3 .borderAa, .main-container-servicios #contenedorCards .card4 .borderAa, .main-container-servicios #contenedorCards .card5 .borderAa, .main-container-servicios #contenedorCards .card6 .borderAa, .main-container-servicios #contenedorCards .card7 .borderAa, .main-container-servicios #contenedorCards .card8 .borderAa {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  width: 120%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.main-container-servicios #contenedorCards .card1 .btn-ver, .main-container-servicios #contenedorCards .card2 .btn-ver, .main-container-servicios #contenedorCards .card3 .btn-ver, .main-container-servicios #contenedorCards .card4 .btn-ver, .main-container-servicios #contenedorCards .card5 .btn-ver, .main-container-servicios #contenedorCards .card6 .btn-ver, .main-container-servicios #contenedorCards .card7 .btn-ver, .main-container-servicios #contenedorCards .card8 .btn-ver {
+  width: 100%;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient(#353d40, #a1a5a6);
+  margin: 0px !important;
+}
+
+body ul li {
+  list-style: none;
+}
+
+body ul li a {
+  text-decoration: none;
+}
