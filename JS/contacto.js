@@ -1,17 +1,9 @@
+const $form = document.querySelector('#form')
+const $buttonMail = document.querySelector('#js-mail')
+
 const mostrar = document.getElementById('main-button');
 const enviar = document.getElementById('main-ventana');
 const quitar = document.getElementById('form');
-
-// mostrar.addEventListener('click', () => {
-//     quitar.parentNode.removeChild(quitar);
-// });
-
-// mostrar.addEventListener('click', () => {
-//     enviar.classList.add('show');
-// });
-
-const $form = document.querySelector('#form')
-const $buttonMail = document.querySelector('#js-mail')
 
 $form.addEventListener('submit', handleSubmit)
 
@@ -21,6 +13,15 @@ function handleSubmit(event){
     $buttonMail.setAttribute('href', `mailto:modernizarq@gmail.com?subject=${form.get('name')} ${form.get('email')} &body=${form.get('message')}`)
     $buttonMail.click()
 }
+
+mostrar.addEventListener('click', () => {
+    // quitar.parentNode.removeChild(quitar);
+});
+
+mostrar.addEventListener('click', () => {
+    enviar.classList.add('show');
+});
+
 
 
 
